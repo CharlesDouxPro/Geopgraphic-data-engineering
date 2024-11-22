@@ -15,5 +15,7 @@ When you run the application, it will generate two outputs:
 ## Installation
 Clone the repo Git :
 ```bash
-git clone <url-du-depot>
-cd nom-du-projet
+git clone https://github.com/CharlesDouxPro/answer-deepki.git
+cd answer-deepki'''
+
+
