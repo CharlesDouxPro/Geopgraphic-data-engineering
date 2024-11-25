@@ -13,7 +13,7 @@ def main():
     del df, data_filtered
     gc.collect()
 
-    gdf['distance'] = calcul_distance(gdf, reference_lat, reference_lon )
+    gdf['distance'] = calcul_distance(gdf, reference_lat, reference_lon)
     reference_building = gdf.loc[gdf['distance'].idxmin()]
     gdf['distance_from_reference_building'] = calcul_distance(gdf, reference_building['latitude'], reference_building['longitude'])
     closest_from_reference_building = gdf.loc[gdf['distance_from_reference_building'][gdf['distance_from_reference_building'] > 0].idxmin()] #Avoid reference to call itself
@@ -24,8 +24,8 @@ def main():
     gc.collect()
 
 if __name__ == '__main__':
-    clean_repo(patterns=['*csv*','*.png*'])
+    clean_repo(patterns=['*.csv*','*.png*'])
     reference_lat, reference_lon, url = get_lat_lon_url_parser()
     filename = url.split('/')[-1]
     main()
-    clean_repo(['*csv*','*.png*'])
+    clean_repo(patterns=['*.csv*'])
