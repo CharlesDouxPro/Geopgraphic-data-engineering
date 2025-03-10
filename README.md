@@ -20,15 +20,15 @@ Docker should be running on your environment.
 ## Installation
 Clone the repo Git :
 ```bash
-git clone https://github.com/CharlesDouxPro/answer-deepki.git
-cd answer-deepki
+git clone https://github.com/CharlesDouxPro/Geopgraphic-data-engineering.git
+cd Geopgraphic-data-engineering
 ```
 
 ## Run
 ```bash
-docker build -t deepki-container
+docker build -t Geopgraphic-data-container
 ```
 ```bash
-docker run -v $(pwd):/workspace deepki-container 
+docker run -v $(pwd):/workspace Geopgraphic-data-container
 ```
 
